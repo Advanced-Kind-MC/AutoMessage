@@ -28,6 +28,6 @@ public class Messages extends BukkitRunnable {
         }
         String message = plugin1.getConfig().getStringList("messages").get(messageNum);
         String color = ChatColor.translateAlternateColorCodes('&', message);
-        plugin.getServer().broadcastMessage(message);
+        plugin.getServer().broadcastMessage(color);
     }
 }
