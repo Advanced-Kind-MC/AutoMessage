@@ -1,0 +1,10 @@
+name: AutoMessage
+version: ${project.version}
+main: com.advancedkind.automessage.AutoMessage
+api-version: 1.16
+authors: [ Clickage ]
+description: AutoMessage for Minecraft Servers
+commands:
+  AutoMessage:
+    description: AutoMessage plugin
+
