@@ -6,7 +6,7 @@
 
     <groupId>com.advanced-kind</groupId>
     <artifactId>AutoMessage</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>AutoMessage</name>
