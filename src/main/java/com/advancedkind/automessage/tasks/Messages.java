@@ -1,11 +1,9 @@
 package com.advancedkind.automessage.tasks;
-
 import com.advancedkind.automessage.AutoMessage;
+import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
-import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
 
 public class Messages extends BukkitRunnable {
 
@@ -19,8 +17,6 @@ public class Messages extends BukkitRunnable {
 
     private int messageNum = 0;
     @Override
-
-
     public void run() {
         messageNum++;
         if(messageNum == plugin1.getConfig().getStringList("messages").size()){
@@ -28,6 +24,7 @@ public class Messages extends BukkitRunnable {
         }
         String message = plugin1.getConfig().getStringList("messages").get(messageNum);
         String color = ChatColor.translateAlternateColorCodes('&', message);
-        plugin.getServer().broadcastMessage(color);
+        String placeholder = PlaceholderAPI.setPlaceholders(null, color);
+        plugin.getServer().broadcastMessage(placeholder);
     }
 }

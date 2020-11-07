@@ -4,6 +4,7 @@ main: com.advancedkind.automessage.AutoMessage
 api-version: 1.16
 authors: [ Clickage ]
 description: AutoMessage for Minecraft Servers
+softdepend: [PlaceholderAPI]
 commands:
   AutoMessage:
     description: AutoMessage plugin

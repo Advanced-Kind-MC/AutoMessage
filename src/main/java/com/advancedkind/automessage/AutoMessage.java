@@ -43,7 +43,7 @@ public final class AutoMessage extends JavaPlugin {
 
                 }
                 else {
-                    player.sendMessage("AutoMessage: Version 1.0");
+                    player.sendMessage("AutoMessage: Version 1.0.2");
                 }
             }
         }
