@@ -23,10 +23,9 @@ public final class AutoMessage extends JavaPlugin {
         BukkitTask Messages = new Messages(this).runTaskTimer(this , 0L , timer);
     }
 
-
+    public boolean toggle = true;
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
         if(command.getName().equalsIgnoreCase("AutoMessage")){
             Player player = (Player) sender;
             if(player.hasPermission("AutoMessage.automessage")){
@@ -40,10 +39,21 @@ public final class AutoMessage extends JavaPlugin {
                             player.sendMessage("AutoMessage reloaded");
                         }
                     }
-
+                    if(player.hasPermission("AutoMessage.toggle")){
+                        if(args[0].equalsIgnoreCase("toggle")){
+                            if(toggle){
+                                toggle = false;
+                                player.sendMessage("AutoMessage disabled");
+                            }
+                            else if (!toggle){
+                                toggle = true;
+                                player.sendMessage("AutoMessage enabled");
+                            }
+                        }
+                    }
                 }
                 else {
-                    player.sendMessage("AutoMessage: Version 1.0.2");
+                    player.sendMessage("AutoMessage: Version 1.0.3");
                 }
             }
         }
@@ -56,6 +66,7 @@ public final class AutoMessage extends JavaPlugin {
             if(args.length == 1){
                 List<String> tab = new ArrayList<>();
                 tab.add("reload");
+                tab.add("toggle");
                 return tab;
             }
         }

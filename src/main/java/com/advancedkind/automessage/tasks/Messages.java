@@ -18,6 +18,7 @@ public class Messages extends BukkitRunnable {
     private int messageNum = 0;
     @Override
     public void run() {
+    if(plugin.toggle){
         messageNum++;
         if(messageNum == plugin1.getConfig().getStringList("messages").size()){
             messageNum = 0;
@@ -26,5 +27,6 @@ public class Messages extends BukkitRunnable {
         String color = ChatColor.translateAlternateColorCodes('&', message);
         String placeholder = PlaceholderAPI.setPlaceholders(null, color);
         plugin.getServer().broadcastMessage(placeholder);
+    }
     }
 }
