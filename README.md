@@ -8,3 +8,5 @@ Simple Minecraft plugin which broadcasts messages to a server at a set interval.
     AutoMessage.automessage 
   
     AutoMessage.reload (needs AutoMessage.automessage)
+    
+    AutoMessage.toggle (needs AutoMessage.automessage)
