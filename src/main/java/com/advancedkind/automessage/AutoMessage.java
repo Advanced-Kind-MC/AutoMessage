@@ -7,7 +7,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,7 +52,7 @@ public final class AutoMessage extends JavaPlugin {
                     }
                 }
                 else {
-                    player.sendMessage("AutoMessage: Version 1.0.3");
+                    player.sendMessage("AutoMessage: Version 1.0.4");
                 }
             }
         }
