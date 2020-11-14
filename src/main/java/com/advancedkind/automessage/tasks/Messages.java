@@ -9,9 +9,6 @@ import java.util.regex.Pattern;
 import static net.md_5.bungee.api.ChatColor.COLOR_CHAR;
 
 public class Messages extends BukkitRunnable {
-
-    Plugin plugin1 = AutoMessage.getPlugin(AutoMessage.class);
-
     AutoMessage plugin;
 
     public Messages(AutoMessage plugin) {
@@ -36,10 +33,10 @@ public class Messages extends BukkitRunnable {
     public void run() {
     if(plugin.toggle){
         messageNum++;
-        if(messageNum == plugin1.getConfig().getStringList("messages").size()){
+        if(messageNum == plugin.getConfig().getStringList("messages").size()){
             messageNum = 0;
         }
-        String message = plugin1.getConfig().getStringList("messages").get(messageNum);
+        String message = plugin.getConfig().getStringList("messages").get(messageNum);
         String color = ChatColor.translateAlternateColorCodes('&', message);
         String placeholder = PlaceholderAPI.setPlaceholders(null, color);
         plugin.getServer().broadcastMessage(translateHexColorCodes("&#", "", placeholder));
