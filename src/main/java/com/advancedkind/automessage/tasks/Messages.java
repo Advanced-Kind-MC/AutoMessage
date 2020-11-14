@@ -2,7 +2,6 @@ package com.advancedkind.automessage.tasks;
 import com.advancedkind.automessage.AutoMessage;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.bukkit.ChatColor;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
